@@ -15,8 +15,11 @@ java -cp checkout.jar com.wang.test.checkout.CheckOutBulk
 java -cp checkout.jar com.wang.test.checkout.CheckOutBulk xx
  
 #To run in interactive mode
+
 	java -cp checkout.jar com.wang.test.checkout.CheckOut
+	
 	type A for Apple 
+	
 	type O for Orange
 	
 	type T to checkout the total
