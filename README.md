@@ -12,7 +12,7 @@ java -cp checkout.jar com.wang.test.checkout.CheckOutBulk
 
 #To run in bulk mode with savings:
 
-java -cp checkout.jar com.wang.test.checkout.CheckOutBulk xx
+java -cp checkout.jar com.wang.test.checkout.CheckOutBulk save
  
 #To run in interactive mode
 
@@ -27,5 +27,6 @@ java -cp checkout.jar com.wang.test.checkout.CheckOutBulk xx
 	type Q to quit the process 
 	
 #To run in interactive mode with savings
-	java -cp checkout.jar com.wang.test.checkout.CheckOut xx
+
+	java -cp checkout.jar com.wang.test.checkout.CheckOut save
 	
