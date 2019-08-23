@@ -2,13 +2,13 @@
 
 The products are Apple and Orange
 
-Apples cost 60p, oranges cost 20p
+Apples cost 60p, Oranges cost 20p
 
 Shop may provide offers as follows:
 
-buy one, get one for free on Apple
+ - Buy one, get one for free on Apple
 
-3 for the price of 2 on Oranges
+ - 3 for the price of 2 on Oranges
 
 It can be run in interactive mode or as batch mode
 
