@@ -22,34 +22,7 @@ public class CheckOutBulk {
 		customers.add(e);
 		
 		for(Cart e1: customers)
-			CheckOutBulk.checkOutCustomer(e1);
-	}
-	
-	
-	public static void checkOutCustomer(Cart customer) {
-		int t=customer.getOrange().getTotal()+customer.getApple().getTotal();
-		System.out.println("\n==============================================");
-		System.out.println("\n======= Final Check Out Customer: " +customer.getId()+" ==========");
-		System.out.println("\n==============================================");
-		String out ="";
-		if(customer.getOrange().getQuantity() > 0) out = customer.getOrange().printSubTotals();
-		if(customer.getApple().getQuantity() > 0) out = customer.getApple().printSubTotals();
-		
-		if(customer.getApple().getQuantity() > 0) {
-			out = customer.getApple().printSubTotals();
-			if(customer.getApple().isBogo()) {
-				out += " \n  Savings applied: "+customer.getApple().applySavings();
-			}
-		}
-		if(customer.getOrange().getQuantity() > 0) {
-			out += customer.getOrange().printSubTotals();
-			if(customer.getOrange().isBogo()) {
-				out += "\n  Savings applied: "+customer.getOrange().applySavings();
-			}
-		}
-
-		System.out.println(out+"\nGrand Total: "+t);
-		System.out.println("\n==============================================");
+			e1.checkOut();
 	}
 
 }

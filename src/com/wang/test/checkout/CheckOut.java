@@ -1,6 +1,7 @@
 package com.wang.test.checkout;
 
 import com.wang.test.checkout.domain.Apple;
+import com.wang.test.checkout.domain.Cart;
 import com.wang.test.checkout.domain.Orange;
 
 public class CheckOut {
@@ -8,6 +9,7 @@ public class CheckOut {
 	Apple a = new Apple();
 	Integer t =0;
 	boolean save =false;
+	Cart cart = new Cart(o,a);
 	
 	public static void main(String[] args) throws Exception {
 		CheckOut c= new CheckOut();
@@ -21,7 +23,9 @@ public class CheckOut {
 	
     public void Run() throws java.lang.Exception {
             try {
-                System.out.print("\nWelcome to our fruit shop.\n");
+            		System.out.println("\n==============================================");
+                System.out.print("\n============ Welcome to our shop =============\n");
+                System.out.println("\n==============================================");
                 if (this.save) System.out.print("\nSavings will be applied\n");
                 int state= 1;
                 do {
@@ -34,27 +38,8 @@ public class CheckOut {
                     	if (c=='O'||c=='o') this.o.addOne();
                     	if (c=='A'||c=='a') this.a.addOne();
                     	if (c=='T'||c=='t') {
-                    		
-                    		this.t=this.o.getTotal()+this.a.getTotal();
-                    		System.out.println("\n==============================================");
-                    		System.out.println("\n========== Final Check Out ===================");
-                    		System.out.println("\n==============================================");
-                    		String out ="";
-                    		if(this.a.getQuantity() > 0) {
-                    			out = this.a.printSubTotals();
-                    			if(this.a.isBogo()) {
-                    				out += " \n  Savings applied: "+this.a.applySavings();
-                    			}
-                    		}
-                    		if(this.o.getQuantity() > 0) {
-                    			out += this.o.printSubTotals();
-                    			if(this.o.isBogo()) {
-                    				out += "\n  Savings applied: "+this.o.applySavings();
-                    			}
-                    		}
-                    		System.out.println(out+"\nGrand Total: "+this.t);
-                    		this.a=new Apple();
-                    		this.o=new Orange();
+                    		this.cart.checkOut();
+                    		this.cart.empty();
                     	}
                     	
                     if ((c=='Q')||(c=='q')) state=99;
