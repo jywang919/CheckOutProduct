@@ -4,31 +4,29 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.wang.test.checkout.domain.Customer;
+import com.wang.test.checkout.domain.Cart;
 
 public class CheckOutBulk {
 
 	public static void main(String[] args) throws InterruptedException {
-		List<Customer> customers = new ArrayList<>();
-		Customer e;
+		List<Cart> customers = new ArrayList<>();
+		Cart e;
 		
 		Boolean save = args.length > 0;
-		e = new Customer("1",Arrays.asList("Apple"), save) ;
+		e = new Cart("1",Arrays.asList("Apple"), save) ;
 		customers.add(e);
-		e = new Customer("2",Arrays.asList("Apple","Apple"),save) ;
+		e = new Cart("2",Arrays.asList("Apple","Apple"),save) ;
 		customers.add(e);
-		e = new Customer("3",Arrays.asList("Apple","Orange","Orange","Apple"), save) ;
+		e = new Cart("3",Arrays.asList("Apple","Orange","Orange","Apple"), save) ;
 		
 		customers.add(e);
 		
-		//Thread.sleep(100);
-		
-		for(Customer e1: customers)
+		for(Cart e1: customers)
 			CheckOutBulk.checkOutCustomer(e1);
 	}
 	
 	
-	public static void checkOutCustomer(Customer customer) {
+	public static void checkOutCustomer(Cart customer) {
 		int t=customer.getOrange().getTotal()+customer.getApple().getTotal();
 		System.out.println("\n==============================================");
 		System.out.println("\n======= Final Check Out Customer: " +customer.getId()+" ==========");
