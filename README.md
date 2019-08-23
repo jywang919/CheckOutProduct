@@ -10,14 +10,15 @@ Shop may provide offers as follows:
 
  - 3 for the price of 2 on Oranges
 
-It can be run in interactive mode or as batch mode
+It can be run in interactive mode or as bulk mode
 
-#To run in bulk mode
-java -cp checkout.jar com.wang.test.checkout.CheckOutBulk
+# To run in bulk mode
 
-#To run in bulk mode with savings:
+    java -cp checkout.jar com.wang.test.checkout.CheckOutBulk
 
-java -cp checkout.jar com.wang.test.checkout.CheckOutBulk save
+# To run in bulk mode with savings:
+
+   java -cp checkout.jar com.wang.test.checkout.CheckOutBulk save
  
 #To run in interactive mode
 
