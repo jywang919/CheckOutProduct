@@ -47,6 +47,7 @@ public class Cart {
 		orange.setBogo(save.booleanValue());
 		apple= new Apple();
 		apple.setBogo(save.booleanValue());
+		System.out.println("\n----- start creating cart: "+id);
 		for(String s : prods) {
 			if(s.startsWith("A")||s.startsWith("a")) {
 				apple.addOne();
@@ -56,6 +57,7 @@ public class Cart {
 			}
 				
 		}
+		System.out.println("\n----- finishec creating cart: "+id);
 		this.id=id;
 	}
 	
@@ -69,15 +71,16 @@ public class Cart {
 		System.out.println("\n======= Final Check Out Cart: " +this.getId()+" ==========");
 		System.out.println("\n==============================================");
 		String out ="";
-		if(this.getOrange().getQuantity() > 0) out = this.getOrange().printSubTotals();
-		if(this.getApple().getQuantity() > 0) out = this.getApple().printSubTotals();
+
+//		if(this.getApple().getQuantity() > 0) out += this.getApple().printSubTotals();
 		
 		if(this.getApple().getQuantity() > 0) {
-			out = this.getApple().printSubTotals();
+			out += this.getApple().printSubTotals();
 			if(this.getApple().isBogo()) {
 				out += " \n  Savings applied: "+this.getApple().applySavings();
 			}
 		}
+//		if(this.getOrange().getQuantity() > 0) out += this.getOrange().printSubTotals();
 		if(this.getOrange().getQuantity() > 0) {
 			out += this.getOrange().printSubTotals();
 			if(this.getOrange().isBogo()) {
