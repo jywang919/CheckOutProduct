@@ -3,7 +3,7 @@ package com.wang.test.checkout.domain;
 import java.util.List;
 
 public class Cart {
-	private String id ="0";
+	private String id ="";
 	private Orange orange;
 	private Apple apple; 
 	
