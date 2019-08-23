@@ -12,7 +12,7 @@ public class Apple extends Product{
 		int saving =0;
 		if(this.isBogo() && this.getQuantity() > 1) {
 			saving = this.getQuantity()/2 *this.getUnitPrice();
-			System.out.println("\n"+this.getProductName() +" saved: "+saving);
+			//System.out.println("\n"+this.getProductName() +" saved: "+saving);
 		}
 		return saving;
 	}

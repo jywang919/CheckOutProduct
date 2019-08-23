@@ -19,10 +19,6 @@ public class CheckOut {
         c.Run();
 	}
 	
-	public void batchBuying() {
-		
-	}
-	
     public void Run() throws java.lang.Exception {
             try {
                 System.out.print("\nWelcome to our fruit shop.\n");
@@ -38,7 +34,8 @@ public class CheckOut {
                     	if (c=='O'||c=='o') this.o.addOne();
                     	if (c=='A'||c=='a') this.a.addOne();
                     	if (c=='T'||c=='t') {
-                    		this.t=o.getTotal()+this.a.getTotal();
+                    		//Thread.sleep(100);
+                    		this.t=this.o.getTotal()+this.a.getTotal();
                     		System.out.println("\n==============================================");
                     		System.out.println("\n========== Final Check Out ===================");
                     		System.out.println("\n==============================================");

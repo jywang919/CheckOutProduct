@@ -8,7 +8,7 @@ import com.wang.test.checkout.domain.Customer;
 
 public class CheckOutBulk {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		List<Customer> customers = new ArrayList<>();
 		Customer e;
 		
@@ -20,6 +20,8 @@ public class CheckOutBulk {
 		e = new Customer("3",Arrays.asList("Apple","Orange","Orange","Apple"), save) ;
 		
 		customers.add(e);
+		
+		//Thread.sleep(100);
 		
 		for(Customer e1: customers)
 			CheckOutBulk.checkOutCustomer(e1);

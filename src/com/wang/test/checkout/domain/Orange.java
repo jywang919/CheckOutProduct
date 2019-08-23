@@ -12,7 +12,7 @@ public class Orange extends Product{
 		int saving =0;
 		if(this.isBogo() && this.getQuantity() > 2) {
 			saving = this.getQuantity()/3 *this.getUnitPrice();
-			System.out.println("\n"+this.getProductName() +" saved: "+saving);
+			//System.out.println("\n"+this.getProductName() +" saved: "+saving);
 		}
 		return saving;
 	}
