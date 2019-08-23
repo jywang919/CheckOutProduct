@@ -1,6 +1,6 @@
 package com.wang.test.checkout.domain;
 
-public abstract class Product {
+public abstract class Merchandise {
 	
 	private int quantity = 0;;
 	
@@ -12,7 +12,7 @@ public abstract class Product {
 	
 	private String savingTerm="";
 	
-	public Product(String name) {
+	public Merchandise(String name) {
 		this.productName=name;
 	}
 	

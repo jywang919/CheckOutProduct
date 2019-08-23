@@ -1,6 +1,6 @@
 package com.wang.test.checkout.domain;
 
-public class Orange extends Product{
+public class Orange extends Merchandise{
 	public Orange() {
 		super("Orange");
 		this.setUnitPrice(25);

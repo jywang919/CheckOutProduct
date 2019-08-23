@@ -1,6 +1,6 @@
 package com.wang.test.checkout.domain;
 
-public class Apple extends Product{
+public class Apple extends Merchandise{
 	public Apple() {
 		super("Apple");
 		this.setUnitPrice(60);
