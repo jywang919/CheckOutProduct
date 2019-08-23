@@ -10,6 +10,10 @@ It can be run in interactive mode or as batch mode
 #To run in bulk mode
 java -cp checkout.jar com.wang.test.checkout.CheckOutBulk
 
+#To run in bulk mode with savings:
+
+java -cp checkout.jar com.wang.test.checkout.CheckOutBulk xx
+ 
 #To run in interactive mode
 	java -cp checkout.jar com.wang.test.checkout.CheckOut
 	type A for Apple 
@@ -18,3 +22,7 @@ java -cp checkout.jar com.wang.test.checkout.CheckOutBulk
 	type T to checkout the total
 	
 	type Q to quit the process 
+	
+#To run in interactive mode with savings
+	java -cp checkout.jar com.wang.test.checkout.CheckOut xx
+	

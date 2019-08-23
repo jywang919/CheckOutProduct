@@ -8,7 +8,7 @@ public class Orange extends Product{
 
 
 	@Override
-	int applySavings() {
+	public int applySavings() {
 		int saving =0;
 		if(this.isBogo() && this.getQuantity() > 2) {
 			saving = this.getQuantity()/3 *this.getUnitPrice();

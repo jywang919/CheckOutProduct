@@ -12,11 +12,13 @@ public class CheckOutBulk {
 		List<Customer> customers = new ArrayList<>();
 		Customer e;
 		
-		e = new Customer("1",Arrays.asList("Apple")) ;
+		Boolean save = args.length > 0;
+		e = new Customer("1",Arrays.asList("Apple"), save) ;
 		customers.add(e);
-		e = new Customer("2",Arrays.asList("Apple","Apple")) ;
+		e = new Customer("2",Arrays.asList("Apple","Apple"),save) ;
 		customers.add(e);
-		e = new Customer("3",Arrays.asList("Apple","Orange","Orange","Apple")) ;
+		e = new Customer("3",Arrays.asList("Apple","Orange","Orange","Apple"), save) ;
+		
 		customers.add(e);
 		
 		for(Customer e1: customers)
@@ -33,7 +35,21 @@ public class CheckOutBulk {
 		if(customer.getOrange().getQuantity() > 0) out = customer.getOrange().printSubTotals();
 		if(customer.getApple().getQuantity() > 0) out = customer.getApple().printSubTotals();
 		
+		if(customer.getApple().getQuantity() > 0) {
+			out = customer.getApple().printSubTotals();
+			if(customer.getApple().isBogo()) {
+				out += " \n  Savings applied: "+customer.getApple().applySavings();
+			}
+		}
+		if(customer.getOrange().getQuantity() > 0) {
+			out += customer.getOrange().printSubTotals();
+			if(customer.getOrange().isBogo()) {
+				out += "\n  Savings applied: "+customer.getOrange().applySavings();
+			}
+		}
+
 		System.out.println(out+"\nGrand Total: "+t);
+		System.out.println("\n==============================================");
 	}
 
 }

@@ -43,8 +43,18 @@ public class CheckOut {
                     		System.out.println("\n========== Final Check Out ===================");
                     		System.out.println("\n==============================================");
                     		String out ="";
-                    		if(this.a.getQuantity() > 0) out = this.a.printSubTotals();
-                    		if(this.o.getQuantity() > 0) out += this.o.printSubTotals();
+                    		if(this.a.getQuantity() > 0) {
+                    			out = this.a.printSubTotals();
+                    			if(this.a.isBogo()) {
+                    				out += " \n  Savings applied: "+this.a.applySavings();
+                    			}
+                    		}
+                    		if(this.o.getQuantity() > 0) {
+                    			out += this.o.printSubTotals();
+                    			if(this.o.isBogo()) {
+                    				out += "\n  Savings applied: "+this.o.applySavings();
+                    			}
+                    		}
                     		System.out.println(out+"\nGrand Total: "+this.t);
                     		this.a=new Apple();
                     		this.o=new Orange();

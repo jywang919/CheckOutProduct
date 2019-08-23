@@ -39,9 +39,11 @@ public class Customer {
 	}
 
 
-	public Customer(String id, List<String> prods) {
+	public Customer(String id, List<String> prods, Boolean save) {
 		orange = new Orange();
+		orange.setBogo(save.booleanValue());
 		apple= new Apple();
+		apple.setBogo(save.booleanValue());
 		for(String s : prods) {
 			if(s.startsWith("A")||s.startsWith("a")) {
 				apple.addOne();
