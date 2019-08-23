@@ -20,7 +20,7 @@ It can be run in interactive mode or as bulk mode
 
    java -cp checkout.jar com.wang.test.checkout.CheckOutBulk save
  
-#To run in interactive mode
+# To run in interactive mode
 
 	java -cp checkout.jar com.wang.test.checkout.CheckOut
 	
@@ -32,7 +32,7 @@ It can be run in interactive mode or as bulk mode
 	
 	type Q to quit the process 
 	
-#To run in interactive mode with savings
+# To run in interactive mode with savings
 
 	java -cp checkout.jar com.wang.test.checkout.CheckOut save
 	
