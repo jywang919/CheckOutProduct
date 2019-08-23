@@ -1,8 +1,6 @@
 ## This project simulates a check out scenarios.
 
-The products are Apple and Orange
-
-Apples cost 60p, Oranges cost 20p
+The products are Apple and Orange.  Apples cost 60p, Oranges cost 20p
 
 Shop may provide offers as follows:
 
